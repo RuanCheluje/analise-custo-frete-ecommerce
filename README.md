@@ -1,10 +1,10 @@
-# 📊 Análise de Custos de Frete no E-commerce
+# Análise de Custos de Frete no E-commerce
 
-🚀 Projeto de análise de dados focado na redução de custos logísticos, identificando oportunidades que podem gerar economia de aproximadamente R$114 mil.
+Projeto de análise de dados focado na redução de custos logísticos, identificando oportunidades que podem gerar economia de aproximadamente R$114 mil.
 
 ---
 
-## 📌 Problema de Negócio
+## Problema de Negócio
 
 O custo de frete no e-commerce frequentemente ultrapassa a meta estabelecida, impactando diretamente a rentabilidade da operação.
 
@@ -12,7 +12,7 @@ Este projeto busca identificar os principais drivers desse custo elevado e propo
 
 ---
 
-## 🔎 Sobre o Projeto
+## Sobre o Projeto
 
 Este projeto tem como objetivo analisar e identificar os principais fatores que impactam o custo de frete no e-commerce.
 
@@ -22,18 +22,18 @@ Os dados analisados compreendem o período de **Janeiro a Maio de 2026**.
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 Identificar padrões e variáveis que contribuem para o aumento do custo logístico:
 
 - Quais regiões possuem maior custo de envio?  
 - Qual o impacto das transportadoras?  
 - Como campanhas promocionais influenciam o frete?  
-- Qual o efeito de cupons (especialmente frete grátis) na rentabilidade?  
+- Qual o efeito de cupons (especialmente frete grátis) no custo logístico?  
 
 ---
 
-## ⚙️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **Python (Pandas / NumPy)** → ETL e tratamento de dados  
 - **Power BI** → Visualização e construção do dashboard  
@@ -43,7 +43,7 @@ Identificar padrões e variáveis que contribuem para o aumento do custo logíst
 
 ---
 
-## 🧱 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```bash
 📁 projeto/
@@ -56,23 +56,23 @@ Identificar padrões e variáveis que contribuem para o aumento do custo logíst
 └── dashboard_frete_ecommerce.pdf
 ````
 
-⚠️ As bases de dados originais não foram incluídas por questões de confidencialidade.
+OBS: As bases de dados originais não foram incluídas por questões de confidencialidade.
 
 
-🔄 Pipeline de Dados (ETL)
+Pipeline de Dados (ETL)
 
 O processamento foi dividido em duas camadas:
 
-- 🐍 Camada 1 — Python (ETL)
+- Camada 1 — Python (ETL)
 
-🔹 Extração
+Extração:
 
 Leitura de múltiplos arquivos Excel de:
 
 - Fretes
 - Notas fiscais
 
-🔹 Transformação
+Transformação:
 
 Principais etapas aplicadas:
 
@@ -80,26 +80,24 @@ Principais etapas aplicadas:
 - Conversão de tipos numéricos
 - Cruzamento entre pedidos e notas fiscais
 - Cálculo de métricas
-
-- 💰 Valor da Nota Fiscal
-
+  
+- Valor da Nota Fiscal:
 ```python
 df_total["VALOR_NF"] = df_total["NUM_NFE"].map(mapa_valores)
 ```
 
-- 🚚 Custo de Frete
-
+- Custo de Frete:
 ```python
 mapa_custo_frete = df_filtrado.groupby("CHAVE_DE_ACESSO_NFE")["VALOR_CT_E"].sum()
 ```
 
-- 📈 Percentual de Frete
+- Percentual de Frete:
 
 ```python
 df_total["PERC_FRETE"] = df_total["CUSTO_FRETE"] / df_total["VALOR_NF"]
 ```
 
-- 🏷️ Classificação de Frete
+- Classificação de Frete:
 
 - **BAIXO** ≤ 4%
 - **OK** entre 4% e 5%
@@ -109,20 +107,20 @@ df_total["PERC_FRETE"] = df_total["CUSTO_FRETE"] / df_total["VALOR_NF"]
 df_total.loc[df_total["PERC_FRETE"] > 0.05, "CLASSIFICACAO_FRETE"] = "ALTO"
 ```
 
-🔹 Carga
+Carga:
 
 - Exportação para formato `.parquet` para consumo no Power BI
 
-- 📊 Camada 2 — Power BI
+- Camada 2 — Power BI
 
-- 🔄 Power Query (M)
+- Power Query (M):
 
 - Tratamento complementar dos dados
 - Padronização de campos
 - Modelagem das tabelas
 - Aplicação de regras de anonimização
 
-- 📐 DAX (Data Analysis Expressions)
+- DAX (Data Analysis Expressions):
 
 Utilizado para construção de métricas e análises como:
 
@@ -133,24 +131,24 @@ Utilizado para construção de métricas e análises como:
 - Avaliação de cupons e frete grátis
 
 
-- 📊 Principais Resultados
+- Principais Resultados:
 
-- ✅ Indicadores Gerais
+- Indicadores Gerais:
 
 - Média custo de frete: **R$18,31**
 - Ticket médio: **R$228,16**
 - Percentual médio de frete: **7,05% (acima da meta)**
 
 
-- 💰 Impacto Financeiro
+- Impacto Financeiro:
 
-- 📉 **Potencial de economia de aproximadamente R$114 mil no período analisado**,  
+- **Potencial de economia de aproximadamente R$114 mil no período analisado**,  
 comparando o custo real de frete com o cenário ideal considerando a meta de 5%.
 
-- 📌 Esse valor representa uma oportunidade direta de ganho de eficiência e melhoria de margem na operação.
+- Esse valor representa uma oportunidade direta de ganho de eficiência e melhoria de margem na operação.
 
 
-- 🌎 Insights por Região
+- Insights por Região:
 
 Estados com maior percentual de frete:
 
@@ -158,10 +156,10 @@ Estados com maior percentual de frete:
 - RS: 10,82%
 - BA: 10,27%
 
-- 📌 Regiões com menor volume apresentam maior custo logístico, evidenciando o impacto da escala operacional.
+- Regiões com menor volume apresentam maior custo logístico, evidenciando o impacto da escala operacional.
 
 
-- 🚛 Transportadoras
+- Transportadoras:
 
 Diferença relevante entre transportadoras:
 
@@ -169,14 +167,14 @@ Diferença relevante entre transportadoras:
 - Transportadora B: 8,42%
 
 
-- 🎟️ Impacto de Cupons
+- Impacto de Cupons:
 
 - Fretes com cupom apresentam custo elevado
 - Frete grátis impacta significativamente a rentabilidade
 - Campanhas acumuladas ampliam o custo logístico
 
 
- -💡 Principais Insights
+ - Principais Insights:
 
 - O custo de frete está diretamente ligado à **escala operacional**
 - **Frete grátis** é um dos principais drivers de aumento de custo
@@ -187,7 +185,7 @@ Diferença relevante entre transportadoras:
   - Tipo de campanha
 
 
-- 🚀 Recomendações
+- Recomendações:
 
 - Revisar política de frete grátis
 - Direcionar campanhas para regiões mais eficientes
@@ -196,7 +194,7 @@ Diferença relevante entre transportadoras:
 - Implementar regras baseadas em margem
 
 
-- 📎 Dashboard
+- Dashboard:
 
 O dashboard completo pode ser visualizado no arquivo:
 
@@ -205,7 +203,7 @@ dashboard_frete_ecommerce.pdf
 ```
 
 
-- 🔐 Dados
+- Dados:
 
 Os dados utilizados neste projeto foram **anonimizados** e **não estão disponíveis neste repositório** por questões de confidencialidade.
 
@@ -222,11 +220,11 @@ O objetivo desta publicação é demonstrar:
 - Análise orientada a negócio
 - Construção de dashboards
 
-📌 Conclusão
+- Conclusão:
 
 Este projeto demonstra a importância da análise de dados aplicada à logística, evidenciando como decisões estratégicas podem impactar diretamente a rentabilidade do e-commerce.
 
-👨‍💼 Autor
+- Autor:
 
 **Ruan de Lima Massad Cheluje**  
 Analista de Logística
