@@ -108,7 +108,7 @@ df_total.loc[df_total["PERC_FRETE"] > 0.05, "CLASSIFICACAO_FRETE"] = "ALTO"
 ```
 
 ---
-Carga:
+## Carga:
 
 - Exportação para formato `.parquet` para consumo no Power BI
 
@@ -143,7 +143,7 @@ dashboard_frete_ecommerce.pdf
 
 
 ---
-- Principais Resultados:
+ ## Principais Resultados:
 
   
 - ## Indicadores Gerais (Página 1):
@@ -186,7 +186,7 @@ Diferença relevante entre transportadoras:
 
 
 ---
- - Principais Insights:
+ - ## Principais Insights:
 
 - O custo de frete está diretamente ligado à **escala operacional**
 - **Frete grátis** é um dos principais drivers de aumento de custo
@@ -198,7 +198,7 @@ Diferença relevante entre transportadoras:
 
 
 ---
-- Recomendações:
+- ## Recomendações:
 
 - Revisar política de frete grátis
 - Direcionar campanhas para regiões mais eficientes
@@ -209,7 +209,7 @@ Diferença relevante entre transportadoras:
 
 
 ---
-- Dados:
+- ## Dados:
 
 Os dados utilizados neste projeto foram **anonimizados** e **não estão disponíveis neste repositório** por questões de confidencialidade.
 
@@ -227,11 +227,13 @@ O objetivo desta publicação é demonstrar:
 - Construção de dashboards
 
 ---
-- Conclusão:
+- ## Conclusão:
 
 Este projeto demonstra a importância da análise de dados aplicada à logística, evidenciando como decisões estratégicas podem impactar diretamente a rentabilidade do e-commerce.
 
-- Autor:
+
+---
+- ## Autor:
 
 **Ruan de Lima Massad Cheluje**  
 Analista de Logística
