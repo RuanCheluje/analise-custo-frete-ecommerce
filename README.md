@@ -58,7 +58,7 @@ Identificar padrões e variáveis que contribuem para o aumento do custo logíst
 
 OBS: As bases de dados originais não foram incluídas por questões de confidencialidade.
 
-
+---
 Pipeline de Dados (ETL)
 
 O processamento foi dividido em duas camadas:
@@ -107,6 +107,7 @@ df_total["PERC_FRETE"] = df_total["CUSTO_FRETE"] / df_total["VALOR_NF"]
 df_total.loc[df_total["PERC_FRETE"] > 0.05, "CLASSIFICACAO_FRETE"] = "ALTO"
 ```
 
+---
 Carga:
 
 - Exportação para formato `.parquet` para consumo no Power BI
@@ -131,7 +132,7 @@ Utilizado para construção de métricas e análises como:
 - Avaliação de cupons e frete grátis
 
 
-
+---
 - Dashboard:
 
 O dashboard completo pode ser visualizado no arquivo:
@@ -141,11 +142,11 @@ dashboard_frete_ecommerce.pdf
 ```
 
 
-
+---
 - Principais Resultados:
 
   
-- Indicadores Gerais (Página 1):
+- ## Indicadores Gerais (Página 1):
   
 - Média custo de frete: **R$18,31**
 - Ticket médio: **R$228,16**
@@ -155,7 +156,7 @@ dashboard_frete_ecommerce.pdf
 
 
 
-- Insights por Região (Página 2):
+- ## Insights por Região (Página 2):
 Estados com maior percentual de frete:
 
 - GO: 11,79%
@@ -166,7 +167,7 @@ Estados com maior percentual de frete:
 
 
 
-- Transportadoras (Página 2):
+- ## Transportadoras (Página 2):
 
 Diferença relevante entre transportadoras:
 
@@ -177,14 +178,14 @@ Diferença relevante entre transportadoras:
 
 
 
-- Impacto de Cupons dos Fretes de Custo Alto (Página 3 e 4):
+- ## Impacto de Cupons dos Fretes de Custo Alto (Página 3 e 4):
 
 - Fretes com cupom apresentam custo elevado
-- Frete grátis impacta significativamente a rentabilidade
+- Frete grátis impacta significativamente a rentabilidade (75% da diferença entre Real x Meta)
 - Campanhas acumuladas ampliam o custo logístico
 
 
-
+---
  - Principais Insights:
 
 - O custo de frete está diretamente ligado à **escala operacional**
@@ -196,7 +197,7 @@ Diferença relevante entre transportadoras:
   - Tipo de campanha
 
 
-
+---
 - Recomendações:
 
 - Revisar política de frete grátis
@@ -207,7 +208,7 @@ Diferença relevante entre transportadoras:
 
 
 
-
+---
 - Dados:
 
 Os dados utilizados neste projeto foram **anonimizados** e **não estão disponíveis neste repositório** por questões de confidencialidade.
@@ -225,6 +226,7 @@ O objetivo desta publicação é demonstrar:
 - Análise orientada a negócio
 - Construção de dashboards
 
+---
 - Conclusão:
 
 Este projeto demonstra a importância da análise de dados aplicada à logística, evidenciando como decisões estratégicas podem impactar diretamente a rentabilidade do e-commerce.
