@@ -131,47 +131,58 @@ Utilizado para construção de métricas e análises como:
 - Avaliação de cupons e frete grátis
 
 
+
+- Dashboard:
+
+O dashboard completo pode ser visualizado no arquivo:
+
+```
+dashboard_frete_ecommerce.pdf
+```
+
+
+
 - Principais Resultados:
 
-- Indicadores Gerais:
-
+  
+- Indicadores Gerais (Página 1):
+  
 - Média custo de frete: **R$18,31**
 - Ticket médio: **R$228,16**
 - Percentual médio de frete: **7,05% (acima da meta)**
+- Média custo frete meta: **R$11,40** (5% do ticket médio)
+- Fretes acima da meta: 59,15%
 
 
-- Impacto Financeiro:
 
-- **Potencial de economia de aproximadamente R$114 mil no período analisado**,  
-comparando o custo real de frete com o cenário ideal considerando a meta de 5%.
-
-- Esse valor representa uma oportunidade direta de ganho de eficiência e melhoria de margem na operação.
-
-
-- Insights por Região:
-
+- Insights por Região (Página 2):
 Estados com maior percentual de frete:
 
 - GO: 11,79%
 - RS: 10,82%
 - BA: 10,27%
 
-- Regiões com menor volume apresentam maior custo logístico, evidenciando o impacto da escala operacional.
+- Regiões com menor volume apresentam maior custo logístico, evidenciando o impacto da escala operacional. Região Sudeste concentra o maior volune de vendas e evidencia um percentual de frete mais baixo em relação as demais regiões do país.
 
 
-- Transportadoras:
+
+- Transportadoras (Página 2):
 
 Diferença relevante entre transportadoras:
 
 - Transportadora A: 10,59%
 - Transportadora B: 8,42%
 
+- A quantidade de fretes emitidos por cada transportador são praticamente a mesma, porém, observa-se um percentual de custo médio diferente.
 
-- Impacto de Cupons:
+
+
+- Impacto de Cupons dos Fretes de Custo Alto (Página 3 e 4):
 
 - Fretes com cupom apresentam custo elevado
 - Frete grátis impacta significativamente a rentabilidade
 - Campanhas acumuladas ampliam o custo logístico
+
 
 
  - Principais Insights:
@@ -185,6 +196,7 @@ Diferença relevante entre transportadoras:
   - Tipo de campanha
 
 
+
 - Recomendações:
 
 - Revisar política de frete grátis
@@ -194,13 +206,6 @@ Diferença relevante entre transportadoras:
 - Implementar regras baseadas em margem
 
 
-- Dashboard:
-
-O dashboard completo pode ser visualizado no arquivo:
-
-```
-dashboard_frete_ecommerce.pdf
-```
 
 
 - Dados:
